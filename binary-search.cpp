@@ -6,21 +6,23 @@ bool p(...) {
     //predicate
 }
 
+// Just remember to always test your code on a two-element set
+// where the predicate is false for the first element and true for the second
 int main() {
     int lo = , hi = ;
     
-//verification :  https://codeforces.com/contest/1221/submission/60853815
     while (lo < hi) {
-        int m = (lo + hi)>>1;
+        int m = lo + (hi - low + 1)>>1;
         if (p(m)) {
             lo = m;
         } else {
             hi = m-1;
         }
     }
+    if (p(lo) == false) // p(x) is false for all values
     cout << lo << endl;
-    //TTTTTT FFFFFFFF
-   //      *
+    //TTTTT T FFFFFFFF // this is kind of difficult
+   //       *
     
     while (lo < hi) {
         int m = (lo + hi) / 2;
@@ -36,7 +38,7 @@ int main() {
     if (lo == hi && p(lo)) {
         //ans = lo
     } else {
-        //ans don't exist
+        //ans doesn't exist
     }
     
     //over real numbers

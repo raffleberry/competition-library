@@ -13,7 +13,7 @@ void write(int x) {
     putchar_unlocked(x%10+48);
 }
 
-template<typename T = int>
+template<typename>
 inline T read() {
     T val = 0, sign = 1; char ch;
     for (ch = getchar_unlocked(); ch < '0' || ch > '9'; ch = getchar_unlocked())
