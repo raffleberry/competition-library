@@ -12,5 +12,5 @@ EX_01_LB=Manual Execute
 EX_01_CM="./%e.out" 
 EX_01_WD=%d
 FT_02_LB=_Build With Debug
-FT_02_CM=g++ -std=c++14 -DLOCAL -Wshadow -Wall -o "%e.out" "%f" -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG
+FT_02_CM=g++ -std=c++14 -Wshadow -Wall -o "%e.out" "%f" -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG
 FT_02_WD=
